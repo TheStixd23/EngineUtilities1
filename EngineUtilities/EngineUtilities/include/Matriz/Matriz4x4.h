@@ -127,6 +127,22 @@ namespace EngineUtilities {
             return result;
         }
 
+        /** Multiplicación por escalar */
+        Matriz4x4 operator*(double scalar) const {
+            Matriz4x4 result;
+            for (int i = 0; i < 4; ++i)
+                for (int j = 0; j < 4; ++j)
+                    result.m[i][j] = m[i][j] * scalar;
+            return result;
+        }
+
+        /** División por escalar */
+        Matriz4x4 operator/(double scalar) const {
+            if (EngineUtilities::fabs(scalar) < EngineUtilities::EPSILON)
+                return Matriz4x4();
+            return (*this) * (1.0 / scalar);
+        }
+
         /** Suma de matrices */
         Matriz4x4 operator+(const Matriz4x4& o) const {
             Matriz4x4 result;
@@ -143,22 +159,6 @@ namespace EngineUtilities {
                 for (int j = 0; j < 4; ++j)
                     result.m[i][j] = m[i][j] - o.m[i][j];
             return result;
-        }
-
-        /** Multiplicación por escalar */
-        Matriz4x4 operator*(double scalar) const {
-            Matriz4x4 result;
-            for (int i = 0; i < 4; ++i)
-                for (int j = 0; j < 4; ++j)
-                    result.m[i][j] = m[i][j] * scalar;
-            return result;
-        }
-
-        /** División por escalar */
-        Matriz4x4 operator/(double scalar) const {
-            if (EngineUtilities::fabs(scalar) < EngineUtilities::EPSILON)
-                return Matriz4x4();
-            return (*this) * (1.0 / scalar);
         }
 
         /** Comparación de igualdad */

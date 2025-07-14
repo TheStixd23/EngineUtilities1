@@ -106,6 +106,21 @@ namespace EngineUtilities {
             );
         }
 
+        /// Multiplicación por escalar
+        Matriz3x3 operator*(double scalar) const {
+            return Matriz3x3(
+                m00 * scalar, m01 * scalar, m02 * scalar,
+                m10 * scalar, m11 * scalar, m12 * scalar,
+                m20 * scalar, m21 * scalar, m22 * scalar
+            );
+        }
+
+        /// División por escalar
+        Matriz3x3 operator/(double scalar) const {
+            if (fabs(scalar) < EPSILON) return Matriz3x3();
+            return (*this) * (1.0 / scalar);
+        }
+
         /// Suma entre matrices
         Matriz3x3 operator+(const Matriz3x3& o) const {
             return Matriz3x3(
@@ -122,21 +137,6 @@ namespace EngineUtilities {
                 m10 - o.m10, m11 - o.m11, m12 - o.m12,
                 m20 - o.m20, m21 - o.m21, m22 - o.m22
             );
-        }
-
-        /// Multiplicación por escalar
-        Matriz3x3 operator*(double scalar) const {
-            return Matriz3x3(
-                m00 * scalar, m01 * scalar, m02 * scalar,
-                m10 * scalar, m11 * scalar, m12 * scalar,
-                m20 * scalar, m21 * scalar, m22 * scalar
-            );
-        }
-
-        /// División por escalar
-        Matriz3x3 operator/(double scalar) const {
-            if (fabs(scalar) < EPSILON) return Matriz3x3();
-            return (*this) * (1.0 / scalar);
         }
 
         /// Comparación de igualdad

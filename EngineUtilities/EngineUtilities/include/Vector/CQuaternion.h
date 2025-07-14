@@ -19,17 +19,11 @@ namespace EngineUtilities {
 
         /**
          * @brief Constructor con componentes específicos.
-         * @param x Componente x
-         * @param y Componente y
-         * @param z Componente z
-         * @param w Componente w
          */
         CQuaternion(float x, float y, float z, float w) : x(x), y(y), z(z), w(w) {}
 
         /**
          * @brief Accede al componente por índice.
-         * @param index Índice del componente (0=x, 1=y, 2=z, 3=w)
-         * @return Referencia al componente.
          */
         float& operator[](int index) {
             switch (index) {
@@ -42,8 +36,6 @@ namespace EngineUtilities {
 
         /**
          * @brief Acceso constante al componente por índice.
-         * @param index Índice del componente (0=x, 1=y, 2=z, 3=w)
-         * @return Referencia constante al componente.
          */
         const float& operator[](int index) const {
             switch (index) {
@@ -129,7 +121,7 @@ namespace EngineUtilities {
          * @brief Normaliza el cuaternión (modifica el actual).
          */
         void normalize() {
-            float mag = static_cast<float>(EngineUtilities::sqrt(lengthSquare()));
+            float mag = length();
             if (mag > 0.0f) {
                 x /= mag; y /= mag; z /= mag; w /= mag;
             }
@@ -156,8 +148,6 @@ namespace EngineUtilities {
 
         /**
          * @brief Rota un vector utilizando el cuaternión.
-         * @param v Vector a rotar
-         * @return Vector rotado
          */
         CVector3 rotate(const CVector3& v) const {
             CQuaternion vec(v.x, v.y, v.z, 0.0f);
@@ -167,9 +157,6 @@ namespace EngineUtilities {
 
         /**
          * @brief Crea un cuaternión desde un eje y ángulo (en radianes).
-         * @param axis Eje de rotación
-         * @param angleRad Ángulo en radianes
-         * @return Cuaternión resultante
          */
         static CQuaternion fromAxisAngle(const CVector3& axis, float angleRad) {
             float halfAngle = angleRad * 0.5f;
@@ -180,10 +167,6 @@ namespace EngineUtilities {
 
         /**
          * @brief Interpolación esférica entre dos cuaterniones.
-         * @param a Primer cuaternión
-         * @param b Segundo cuaternión
-         * @param t Parámetro de interpolación [0,1]
-         * @return Cuaternión interpolado
          */
         static CQuaternion slerp(const CQuaternion& a, const CQuaternion& b, float t) {
             float dot = a.dot(b);
@@ -228,9 +211,6 @@ namespace EngineUtilities {
 
 /**
  * @brief Sobrecarga del operador << para imprimir un cuaternión.
- * @param os Flujo de salida
- * @param q Cuaternión a imprimir
- * @return Flujo de salida modificado
  */
 inline std::ostream& operator<<(std::ostream& os, const EngineUtilities::CQuaternion& q) {
     os << "CQuaternion(" << q.x << ", " << q.y << ", " << q.z << ", " << q.w << ")";
