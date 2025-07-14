@@ -1,14 +1,32 @@
-﻿#include <iostream>
+﻿/**
+ * @file testMatriz2x2.cpp
+ * @brief Prueba interactiva para la clase Matriz2x2 de EngineUtilities.
+ * @author Hannin Abarca
+ */
+
+#include <iostream>
 #include "../include/Matriz/Matriz2x2.h"
 using namespace std;
 
+/**
+ * @brief Menú interactivo para probar las funcionalidades de la clase Matriz2x2.
+ *
+ * Este menú permite:
+ * - Ingresar matrices personalizadas (2x2).
+ * - Visualizar las matrices ingresadas.
+ * - Obtener la transpuesta de cada matriz.
+ * - Calcular el determinante e inversa (si existe).
+ * - Operaciones básicas entre matrices (+, -, *, /).
+ * - Generar matrices de escala y rotación.
+ * - Comparar matrices por igualdad y desigualdad.
+ */
 void testMatriz2x2() {
     int option;
     double a, b, c, d, scalar, angle;
     EngineUtilities::Matriz2x2 m1, m2;
 
     do {
-        cout << "\n=== Menu - Prueba de Matriz2x2 ===\n";
+        cout << "\nMenu-Prueba de Matriz2x2\n";
         cout << "1. Ingresar matriz personalizada\n";
         cout << "2. Mostrar matrices actuales\n";
         cout << "3. Transpuesta\n";

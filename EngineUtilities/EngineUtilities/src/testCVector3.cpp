@@ -1,14 +1,34 @@
+/**
+ * @file testCVector3.cpp
+ * @brief Prueba interactiva de la clase CVector3 del módulo EngineUtilities.
+ * @author Hannin Abarca
+ */
+
 #include <iostream>
 #include "../include/Vector/CVector3.h"
 using namespace std;
 
+/**
+ * @brief Ejecuta un menú interactivo para probar funcionalidades de la clase CVector3.
+ *
+ * Este menú permite:
+ * - Ingresar vectores manualmente.
+ * - Realizar operaciones básicas (+, -, *, /).
+ * - Aplicar operadores de asignación (+=, -=, *=, /=).
+ * - Comparar vectores con == y !=.
+ * - Acceder a componentes por índice.
+ * - Calcular magnitud y longitud.
+ * - Realizar producto punto y cruz.
+ * - Normalizar vectores.
+ * - Usar funciones estáticas como distance, lerp, zero y one.
+ */
 void testCVector3() {
     int option;
     float x1, y1, z1, x2, y2, z2, scalar;
     EngineUtilities::CVector3 v1, v2;
 
     do {
-        cout << "\n=== Menu - Prueba de CVector3 ===\n";
+        cout << "\nMenu-Prueba de CVector3\n";
         cout << "1. Ingresar vectores\n";
         cout << "2. Operadores basicos (+, -, *, /)\n";
         cout << "3. Operadores asignacion (+=, -=, *=, /=)\n";

@@ -1,14 +1,34 @@
+/**
+ * @file testCVector2.cpp
+ * @brief Prueba interactiva de la clase CVector2 del módulo EngineUtilities.
+ * @author Hannin Abarca
+ */
+
 #include <iostream>
 #include "../include/Vector/CVector2.h"
 using namespace std;
 
+/**
+ * @brief Ejecuta un menú interactivo para probar las funcionalidades de la clase CVector2.
+ *
+ * Este menú permite:
+ * - Ingresar vectores manualmente.
+ * - Realizar operaciones básicas: suma, resta, multiplicación y división.
+ * - Usar operadores de asignación: +=, -=, *=, /=.
+ * - Comparar vectores con == y !=.
+ * - Acceder a elementos mediante índices.
+ * - Calcular longitud, magnitud y producto punto/cruz.
+ * - Normalizar vectores.
+ * - Usar funciones estáticas como distance, lerp, zero y one.
+ * - Aplicar transformaciones como setPosition, move, setScale y scale.
+ */
 void testCVector2() {
     int option;
     float x1, y1, x2, y2, scalar;
     EngineUtilities::CVector2 v1, v2;
 
     do {
-        cout << "\n=== Menu - Prueba de CVector2 ===\n";
+        cout << "\nMenu - Prueba de CVector2\n";
         cout << "1. Ingresar vectores\n";
         cout << "2. Operadores basicos (+, -, *, /)\n";
         cout << "3. Operadores asignacion (+=, -=, *=, /=)\n";

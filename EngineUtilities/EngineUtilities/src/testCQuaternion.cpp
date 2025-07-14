@@ -1,14 +1,35 @@
+/**
+ * @file testCQuaternion.cpp
+ * @brief Menú de pruebas para la clase CQuaternion de EngineUtilities.
+ * @author Hannin Abarca
+ */
+
 #include <iostream>
 #include "../include/Vector/CQuaternion.h"
+
 using namespace std;
 
+/**
+ * @brief Ejecuta un menú interactivo para probar las funcionalidades de la clase CQuaternion.
+ *
+ * Permite al usuario:
+ * - Ingresar quaterniones
+ * - Realizar operaciones básicas (+, -, *, escalar)
+ * - Acceder a componentes y calcular magnitud y producto punto
+ * - Normalizar y calcular el conjugado
+ * - Rotar un vector 3D
+ * - Crear un quaternion desde eje y ángulo
+ * - Realizar interpolación esférica (SLERP)
+ * - Comparar quaterniones
+ * - Obtener valores predefinidos como `identity` y `zero`
+ */
 void testCQuaternion() {
     int option;
     float x1, y1, z1, w1, x2, y2, z2, w2, scalar, t, angleRad;
     EngineUtilities::CVector3 axis, vectorToRotate;
 
     do {
-        cout << "\n=== Menu - Prueba de CQuaternion ===\n";
+        cout << "\nMenu-Prueba de CQuaternion\n";
         cout << "1. Ingresar quaterniones\n";
         cout << "2. Operadores basicos (+, -, *, escalado)\n";
         cout << "3. Acceso a elementos ([]), longitud y producto punto\n";

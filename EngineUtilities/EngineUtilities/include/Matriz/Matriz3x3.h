@@ -4,18 +4,25 @@
 
 namespace EngineUtilities {
 
+    /**
+     * @class Matriz3x3
+     * @brief Representa una matriz 3x3 con operaciones comunes como escala, rotación, transposición, inversa y más.
+     * @author Hannin Abarca
+     */
     class Matriz3x3 {
     public:
         double m00, m01, m02;
         double m10, m11, m12;
         double m20, m21, m22;
 
+        /// Constructor por defecto (matriz identidad)
         Matriz3x3()
             : m00(1.0), m01(0.0), m02(0.0),
             m10(0.0), m11(1.0), m12(0.0),
             m20(0.0), m21(0.0), m22(1.0) {
         }
 
+        /// Constructor con valores explícitos
         Matriz3x3(double a00, double a01, double a02,
             double a10, double a11, double a12,
             double a20, double a21, double a22)
@@ -24,6 +31,7 @@ namespace EngineUtilities {
             m20(a20), m21(a21), m22(a22) {
         }
 
+        /// Genera una matriz de escala homogénea
         static Matriz3x3 Scale(double sx, double sy) {
             return Matriz3x3(
                 sx, 0.0, 0.0,
@@ -32,6 +40,7 @@ namespace EngineUtilities {
             );
         }
 
+        /// Genera una matriz de rotación homogénea (ángulo en radianes)
         static Matriz3x3 Rotate(double angle) {
             double cosA = cos(angle);
             double sinA = sin(angle);
@@ -42,6 +51,7 @@ namespace EngineUtilities {
             );
         }
 
+        /// Transpone la matriz
         Matriz3x3 transpose() const {
             return Matriz3x3(
                 m00, m10, m20,
@@ -50,12 +60,14 @@ namespace EngineUtilities {
             );
         }
 
+        /// Calcula el determinante de la matriz
         double determinant() const {
             return m00 * (m11 * m22 - m12 * m21)
                 - m01 * (m10 * m22 - m12 * m20)
                 + m02 * (m10 * m21 - m11 * m20);
         }
 
+        /// Retorna la inversa de la matriz (o matriz identidad si no es invertible)
         Matriz3x3 inverse() const {
             double det = determinant();
             if (fabs(det) < EPSILON) return Matriz3x3();
@@ -77,6 +89,7 @@ namespace EngineUtilities {
             );
         }
 
+        /// Multiplicación entre matrices
         Matriz3x3 operator*(const Matriz3x3& o) const {
             return Matriz3x3(
                 m00 * o.m00 + m01 * o.m10 + m02 * o.m20,
@@ -93,6 +106,7 @@ namespace EngineUtilities {
             );
         }
 
+        /// Suma entre matrices
         Matriz3x3 operator+(const Matriz3x3& o) const {
             return Matriz3x3(
                 m00 + o.m00, m01 + o.m01, m02 + o.m02,
@@ -101,6 +115,7 @@ namespace EngineUtilities {
             );
         }
 
+        /// Resta entre matrices
         Matriz3x3 operator-(const Matriz3x3& o) const {
             return Matriz3x3(
                 m00 - o.m00, m01 - o.m01, m02 - o.m02,
@@ -109,6 +124,7 @@ namespace EngineUtilities {
             );
         }
 
+        /// Multiplicación por escalar
         Matriz3x3 operator*(double scalar) const {
             return Matriz3x3(
                 m00 * scalar, m01 * scalar, m02 * scalar,
@@ -117,11 +133,13 @@ namespace EngineUtilities {
             );
         }
 
+        /// División por escalar
         Matriz3x3 operator/(double scalar) const {
             if (fabs(scalar) < EPSILON) return Matriz3x3();
             return (*this) * (1.0 / scalar);
         }
 
+        /// Comparación de igualdad
         bool operator==(const Matriz3x3& o) const {
             return fabs(m00 - o.m00) < EPSILON &&
                 fabs(m01 - o.m01) < EPSILON &&
@@ -134,6 +152,7 @@ namespace EngineUtilities {
                 fabs(m22 - o.m22) < EPSILON;
         }
 
+        /// Comparación de desigualdad
         bool operator!=(const Matriz3x3& o) const {
             return !(*this == o);
         }

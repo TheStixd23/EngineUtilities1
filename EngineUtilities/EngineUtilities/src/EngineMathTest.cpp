@@ -1,12 +1,25 @@
-﻿#include <iostream>
+﻿/**
+ * @file EngineMathTest.cpp
+ * @brief Prueba interactiva para funciones de EngineMath.
+ * @author Hannin Abarca
+ */
+
+#include <iostream>
 #include "../include/Utilities/EngineMath.h"
 
 using namespace std;
 
+/**
+ * @brief Función de prueba interactiva para mostrar el uso de las funciones de EngineMath.
+ *
+ * Esta función muestra un menú con opciones para probar diferentes categorías de funciones
+ * matemáticas implementadas en la biblioteca EngineMath, incluyendo constantes, funciones
+ * básicas, trigonometría, geometría, conversión angular y funciones utilitarias.
+ */
 void testEngineMath() {
     int option;
     do {
-        cout << "\n=== Menu - Prueba de EngineMath ===\n";
+        cout << "\nMenu-Prueba del EngineMath\n";
         cout << "1. Mostrar constantes\n";
         cout << "2. Funciones basicas\n";
         cout << "3. Trigonometria\n";

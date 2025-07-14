@@ -1,14 +1,37 @@
+/**
+ * @file testMatriz4x4.cpp
+ * @brief Prueba interactiva para la clase Matriz4x4 de EngineUtilities.
+ *
+ * Este archivo permite al usuario interactuar con operaciones básicas y avanzadas
+ * de matrices 4x4, como transposición, inversión, transformaciones (escala, rotación, traslación),
+ * comparación, y operaciones aritméticas.
+ *
+ * @author Hannin Abarca
+ */
+
 #include <iostream>
 #include "../include/Matriz/Matriz4x4.h"
 using namespace std;
 
+/**
+ * @brief Ejecuta un menú interactivo para probar la clase Matriz4x4.
+ *
+ * Opciones disponibles:
+ * - Ingreso manual de matrices
+ * - Mostrar contenido de matrices
+ * - Obtener transpuestas
+ * - Calcular inversas
+ * - Operaciones aritméticas (+, -, *, /)
+ * - Generación de matrices de escala, rotación (Z), y traslación
+ * - Comparación lógica (==, !=)
+ */
 void testMatriz4x4() {
     int option;
     double values[16];
     EngineUtilities::Matriz4x4 m1, m2;
 
     do {
-        cout << "\n=== Menú - Prueba de Matriz4x4 ===\n";
+        cout << "\nMenu-Prueba de Matriz4x4\n";
         cout << "1. Ingresar matriz personalizada\n";
         cout << "2. Mostrar matrices actuales\n";
         cout << "3. Transpuesta\n";

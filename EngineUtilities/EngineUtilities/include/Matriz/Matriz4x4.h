@@ -1,19 +1,31 @@
+/**
+ * @file Matriz4x4.h
+ * @brief Implementación de una matriz 4x4 para transformaciones en 3D.
+ * @author Hannin Abarca
+ */
+
 #pragma once
 
 #include "../Utilities/EngineMath.h"
 
 namespace EngineUtilities {
 
+    /**
+     * @class Matriz4x4
+     * @brief Representa una matriz 4x4 con operaciones comunes para transformaciones 3D.
+     */
     class Matriz4x4 {
     public:
-        double m[4][4];
+        double m[4][4]; ///< Elementos de la matriz
 
+        /** Constructor identidad */
         Matriz4x4() {
             for (int i = 0; i < 4; ++i)
                 for (int j = 0; j < 4; ++j)
                     m[i][j] = (i == j) ? 1.0 : 0.0;
         }
 
+        /** Constructor con valores */
         Matriz4x4(double m00, double m01, double m02, double m03,
             double m10, double m11, double m12, double m13,
             double m20, double m21, double m22, double m23,
@@ -24,6 +36,7 @@ namespace EngineUtilities {
             m[3][0] = m30; m[3][1] = m31; m[3][2] = m32; m[3][3] = m33;
         }
 
+        /** Escalado */
         static Matriz4x4 Scale(double sx, double sy, double sz) {
             return Matriz4x4(
                 sx, 0.0, 0.0, 0.0,
@@ -33,6 +46,7 @@ namespace EngineUtilities {
             );
         }
 
+        /** Traslación */
         static Matriz4x4 Translate(double tx, double ty, double tz) {
             return Matriz4x4(
                 1.0, 0.0, 0.0, tx,
@@ -42,6 +56,7 @@ namespace EngineUtilities {
             );
         }
 
+        /** Rotación sobre eje Z */
         static Matriz4x4 RotateZ(double angle) {
             double c = EngineUtilities::cos(angle);
             double s = EngineUtilities::sin(angle);
@@ -53,6 +68,7 @@ namespace EngineUtilities {
             );
         }
 
+        /** Transpuesta */
         Matriz4x4 transpose() const {
             Matriz4x4 result;
             for (int i = 0; i < 4; ++i)
@@ -61,27 +77,27 @@ namespace EngineUtilities {
             return result;
         }
 
+        /** Inversa */
         Matriz4x4 inverse() const {
             Matriz4x4 inv;
-            double det;
-            double invOut[16];
+            double det, invOut[16];
             const double* m_ = &m[0][0];
 
             invOut[0] = m_[5] * m_[10] * m_[15] - m_[5] * m_[11] * m_[14] - m_[9] * m_[6] * m_[15] + m_[9] * m_[7] * m_[14] + m_[13] * m_[6] * m_[11] - m_[13] * m_[7] * m_[10];
-            invOut[4] = -m_[4] * m_[10] * m_[15] + m_[4] * m_[11] * m_[14] + m_[8] * m_[6] * m_[15] - m_[8] * m_[7] * m_[14] - m_[12] * m_[6] * m_[11] + m_[12] * m_[7] * m_[10];
-            invOut[8] = m_[4] * m_[9] * m_[15] - m_[4] * m_[11] * m_[13] - m_[8] * m_[5] * m_[15] + m_[8] * m_[7] * m_[13] + m_[12] * m_[5] * m_[11] - m_[12] * m_[7] * m_[9];
-            invOut[12] = -m_[4] * m_[9] * m_[14] + m_[4] * m_[10] * m_[13] + m_[8] * m_[5] * m_[14] - m_[8] * m_[6] * m_[13] - m_[12] * m_[5] * m_[10] + m_[12] * m_[6] * m_[9];
             invOut[1] = -m_[1] * m_[10] * m_[15] + m_[1] * m_[11] * m_[14] + m_[9] * m_[2] * m_[15] - m_[9] * m_[3] * m_[14] - m_[13] * m_[2] * m_[11] + m_[13] * m_[3] * m_[10];
-            invOut[5] = m_[0] * m_[10] * m_[15] - m_[0] * m_[11] * m_[14] - m_[8] * m_[2] * m_[15] + m_[8] * m_[3] * m_[14] + m_[12] * m_[2] * m_[11] - m_[12] * m_[3] * m_[10];
-            invOut[9] = -m_[0] * m_[9] * m_[15] + m_[0] * m_[11] * m_[13] + m_[8] * m_[1] * m_[15] - m_[8] * m_[3] * m_[13] + m_[12] * m_[1] * m_[11] - m_[12] * m_[3] * m_[9];
-            invOut[13] = m_[0] * m_[9] * m_[14] - m_[0] * m_[10] * m_[13] - m_[8] * m_[1] * m_[14] + m_[8] * m_[2] * m_[13] + m_[12] * m_[1] * m_[10] - m_[12] * m_[2] * m_[9];
             invOut[2] = m_[1] * m_[6] * m_[15] - m_[1] * m_[7] * m_[14] - m_[5] * m_[2] * m_[15] + m_[5] * m_[3] * m_[14] + m_[13] * m_[2] * m_[7] - m_[13] * m_[3] * m_[6];
-            invOut[6] = -m_[0] * m_[6] * m_[15] + m_[0] * m_[7] * m_[14] + m_[4] * m_[2] * m_[15] - m_[4] * m_[3] * m_[14] - m_[12] * m_[2] * m_[7] + m_[12] * m_[3] * m_[6];
-            invOut[10] = m_[0] * m_[5] * m_[15] - m_[0] * m_[7] * m_[13] - m_[4] * m_[1] * m_[15] + m_[4] * m_[3] * m_[13] + m_[12] * m_[1] * m_[7] - m_[12] * m_[3] * m_[5];
-            invOut[14] = -m_[0] * m_[5] * m_[14] + m_[0] * m_[6] * m_[13] + m_[4] * m_[1] * m_[14] - m_[4] * m_[2] * m_[13] - m_[12] * m_[1] * m_[6] + m_[12] * m_[2] * m_[5];
             invOut[3] = -m_[1] * m_[6] * m_[11] + m_[1] * m_[7] * m_[10] + m_[5] * m_[2] * m_[11] - m_[5] * m_[3] * m_[10] - m_[9] * m_[2] * m_[7] + m_[9] * m_[3] * m_[6];
+            invOut[4] = -m_[4] * m_[10] * m_[15] + m_[4] * m_[11] * m_[14] + m_[8] * m_[6] * m_[15] - m_[8] * m_[7] * m_[14] - m_[12] * m_[6] * m_[11] + m_[12] * m_[7] * m_[10];
+            invOut[5] = m_[0] * m_[10] * m_[15] - m_[0] * m_[11] * m_[14] - m_[8] * m_[2] * m_[15] + m_[8] * m_[3] * m_[14] + m_[12] * m_[2] * m_[11] - m_[12] * m_[3] * m_[10];
+            invOut[6] = -m_[0] * m_[6] * m_[15] + m_[0] * m_[7] * m_[14] + m_[4] * m_[2] * m_[15] - m_[4] * m_[3] * m_[14] - m_[12] * m_[2] * m_[7] + m_[12] * m_[3] * m_[6];
             invOut[7] = m_[0] * m_[6] * m_[11] - m_[0] * m_[7] * m_[10] - m_[4] * m_[2] * m_[11] + m_[4] * m_[3] * m_[10] + m_[8] * m_[2] * m_[7] - m_[8] * m_[3] * m_[6];
+            invOut[8] = m_[4] * m_[9] * m_[15] - m_[4] * m_[11] * m_[13] - m_[8] * m_[5] * m_[15] + m_[8] * m_[7] * m_[13] + m_[12] * m_[5] * m_[11] - m_[12] * m_[7] * m_[9];
+            invOut[9] = -m_[0] * m_[9] * m_[15] + m_[0] * m_[11] * m_[13] + m_[8] * m_[1] * m_[15] - m_[8] * m_[3] * m_[13] + m_[12] * m_[1] * m_[11] - m_[12] * m_[3] * m_[9];
+            invOut[10] = m_[0] * m_[5] * m_[15] - m_[0] * m_[7] * m_[13] - m_[4] * m_[1] * m_[15] + m_[4] * m_[3] * m_[13] + m_[12] * m_[1] * m_[7] - m_[12] * m_[3] * m_[5];
             invOut[11] = -m_[0] * m_[5] * m_[11] + m_[0] * m_[7] * m_[9] + m_[4] * m_[1] * m_[11] - m_[4] * m_[3] * m_[9] - m_[8] * m_[1] * m_[7] + m_[8] * m_[3] * m_[5];
+            invOut[12] = -m_[4] * m_[9] * m_[14] + m_[4] * m_[10] * m_[13] + m_[8] * m_[5] * m_[14] - m_[8] * m_[6] * m_[13] - m_[12] * m_[5] * m_[10] + m_[12] * m_[6] * m_[9];
+            invOut[13] = m_[0] * m_[9] * m_[14] - m_[0] * m_[10] * m_[13] - m_[8] * m_[1] * m_[14] + m_[8] * m_[2] * m_[13] + m_[12] * m_[1] * m_[10] - m_[12] * m_[2] * m_[9];
+            invOut[14] = -m_[0] * m_[5] * m_[14] + m_[0] * m_[6] * m_[13] + m_[4] * m_[1] * m_[14] - m_[4] * m_[2] * m_[13] - m_[12] * m_[1] * m_[6] + m_[12] * m_[2] * m_[5];
             invOut[15] = m_[0] * m_[5] * m_[10] - m_[0] * m_[6] * m_[9] - m_[4] * m_[1] * m_[10] + m_[4] * m_[2] * m_[9] + m_[8] * m_[1] * m_[6] - m_[8] * m_[2] * m_[5];
 
             det = m_[0] * invOut[0] + m_[1] * invOut[4] + m_[2] * invOut[8] + m_[3] * invOut[12];
@@ -99,6 +115,7 @@ namespace EngineUtilities {
             return inv;
         }
 
+        /** Multiplicación por otra matriz */
         Matriz4x4 operator*(const Matriz4x4& o) const {
             Matriz4x4 result;
             for (int i = 0; i < 4; ++i)
@@ -110,6 +127,7 @@ namespace EngineUtilities {
             return result;
         }
 
+        /** Suma de matrices */
         Matriz4x4 operator+(const Matriz4x4& o) const {
             Matriz4x4 result;
             for (int i = 0; i < 4; ++i)
@@ -118,6 +136,7 @@ namespace EngineUtilities {
             return result;
         }
 
+        /** Resta de matrices */
         Matriz4x4 operator-(const Matriz4x4& o) const {
             Matriz4x4 result;
             for (int i = 0; i < 4; ++i)
@@ -126,6 +145,7 @@ namespace EngineUtilities {
             return result;
         }
 
+        /** Multiplicación por escalar */
         Matriz4x4 operator*(double scalar) const {
             Matriz4x4 result;
             for (int i = 0; i < 4; ++i)
@@ -134,12 +154,14 @@ namespace EngineUtilities {
             return result;
         }
 
+        /** División por escalar */
         Matriz4x4 operator/(double scalar) const {
             if (EngineUtilities::fabs(scalar) < EngineUtilities::EPSILON)
                 return Matriz4x4();
             return (*this) * (1.0 / scalar);
         }
 
+        /** Comparación de igualdad */
         bool operator==(const Matriz4x4& o) const {
             for (int i = 0; i < 4; ++i)
                 for (int j = 0; j < 4; ++j)
@@ -148,6 +170,7 @@ namespace EngineUtilities {
             return true;
         }
 
+        /** Comparación de desigualdad */
         bool operator!=(const Matriz4x4& o) const {
             return !(*this == o);
         }

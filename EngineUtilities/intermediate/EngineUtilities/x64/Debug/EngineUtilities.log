@@ -1,2 +1,19 @@
-﻿  LINK : C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\bin\x64\EngineUtilities_d.exe not found or not built by the last incremental link; performing full link
+﻿  EngineMathTest.cpp
+  Main.cpp
+  testCVector2.cpp
+  testCVector3.cpp
+  testCVector4.cpp
+  testMatriz2x2.cpp
+  testMatriz3x3.cpp
+  testMatriz4x4.cpp
+  testCQuaternion.cpp
+C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\EngineUtilities\src\EngineMathTest.cpp(146,21): warning C4566: character represented by universal-character-name '\u2248' cannot be represented in the current code page (1252)
+C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\EngineUtilities\src\testCQuaternion.cpp(37,1): warning C4701: potentially uninitialized local variable 'x1' used
+C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\EngineUtilities\src\testCQuaternion.cpp(37,1): warning C4701: potentially uninitialized local variable 'y1' used
+C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\EngineUtilities\src\testCQuaternion.cpp(37,1): warning C4701: potentially uninitialized local variable 'z1' used
+C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\EngineUtilities\src\testCQuaternion.cpp(37,1): warning C4701: potentially uninitialized local variable 'w1' used
+C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\EngineUtilities\src\testCQuaternion.cpp(38,1): warning C4701: potentially uninitialized local variable 'x2' used
+C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\EngineUtilities\src\testCQuaternion.cpp(38,1): warning C4701: potentially uninitialized local variable 'y2' used
+C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\EngineUtilities\src\testCQuaternion.cpp(38,1): warning C4701: potentially uninitialized local variable 'z2' used
+C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\EngineUtilities\src\testCQuaternion.cpp(38,1): warning C4701: potentially uninitialized local variable 'w2' used
   EngineUtilities.vcxproj -> C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\bin\x64\EngineUtilities_d.exe

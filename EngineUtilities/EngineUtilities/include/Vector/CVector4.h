@@ -5,12 +5,34 @@
 
 namespace EngineUtilities {
 
+    /**
+     * @author Hannin Abarca
+     * @class CVector4
+     * @brief Representa un vector de 4 dimensiones con componentes x, y, z y w.
+     *
+     * Ofrece operaciones aritméticas, normalización, producto punto y utilidades
+     * como interpolación lineal y distancia. Ideal para álgebra lineal en motores gráficos.
+     */
     class CVector4 {
     public:
         float x, y, z, w;
 
+        /**
+         * @brief Constructor por defecto. Inicializa todos los componentes a 0.
+         */
         CVector4() : x(0), y(0), z(0), w(0) {}
+
+        /**
+         * @brief Constructor por componentes.
+         * @param x Componente X.
+         * @param y Componente Y.
+         * @param z Componente Z.
+         * @param w Componente W.
+         */
         CVector4(float x, float y, float z, float w) : x(x), y(y), z(z), w(w) {}
+
+        /// @name Operaciones aritméticas
+        /// @{
 
         CVector4 operator+(const CVector4& other) const {
             return CVector4(x + other.x, y + other.y, z + other.z, w + other.w);
@@ -48,6 +70,11 @@ namespace EngineUtilities {
             return *this;
         }
 
+        /// @}
+
+        /// @name Comparación
+        /// @{
+
         bool operator==(const CVector4& other) const {
             return EngineUtilities::approxEqual(x, other.x) &&
                 EngineUtilities::approxEqual(y, other.y) &&
@@ -58,6 +85,11 @@ namespace EngineUtilities {
         bool operator!=(const CVector4& other) const {
             return !(*this == other);
         }
+
+        /// @}
+
+        /// @name Acceso por índice
+        /// @{
 
         float& operator[](int index) {
             switch (index) {
@@ -76,6 +108,11 @@ namespace EngineUtilities {
             default: return w;
             }
         }
+
+        /// @}
+
+        /// @name Propiedades vectoriales
+        /// @{
 
         float lengthSquare() const {
             return x * x + y * y + z * z + w * w;
@@ -104,6 +141,11 @@ namespace EngineUtilities {
             }
         }
 
+        /// @}
+
+        /// @name Funciones estáticas
+        /// @{
+
         static float distance(const CVector4& a, const CVector4& b) {
             return (b - a).length();
         }
@@ -120,6 +162,11 @@ namespace EngineUtilities {
             return CVector4(1.f, 1.f, 1.f, 1.f);
         }
 
+        /// @}
+
+        /**
+         * @brief Imprime el vector en el formato "CVector4(x, y, z, w)".
+         */
         friend std::ostream& operator<<(std::ostream& os, const CVector4& v) {
             os << "CVector4(" << v.x << ", " << v.y << ", " << v.z << ", " << v.w << ")";
             return os;

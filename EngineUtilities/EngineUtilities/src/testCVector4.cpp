@@ -1,14 +1,34 @@
+/**
+ * @file testCVector4.cpp
+ * @brief Prueba interactiva de la clase CVector4 del módulo EngineUtilities.
+ * @author Hannin Abarca
+ */
+
 #include <iostream>
 #include "../include/Vector/CVector4.h"
 using namespace std;
 
+/**
+ * @brief Ejecuta un menú interactivo para probar funcionalidades de la clase CVector4.
+ *
+ * Este menú permite:
+ * - Ingresar vectores manualmente.
+ * - Realizar operaciones básicas (+, -, *, /).
+ * - Aplicar operadores de asignación (+=, -=, *=, /=).
+ * - Comparar vectores con == y !=.
+ * - Acceder a componentes por índice con [].
+ * - Calcular magnitud y magnitud al cuadrado.
+ * - Calcular producto punto.
+ * - Normalizar vectores.
+ * - Usar funciones estáticas como distance, lerp, zero y one.
+ */
 void testCVector4() {
     int option;
     float x1, y1, z1, w1, x2, y2, z2, w2, scalar;
     EngineUtilities::CVector4 v1, v2;
 
     do {
-        cout << "\n=== Menu - Prueba de CVector4 ===\n";
+        cout << "\nMenu-Prueba de CVector4\n";
         cout << "1. Ingresar vectores\n";
         cout << "2. Operadores basicos (+, -, *, /)\n";
         cout << "3. Operadores asignacion (+=, -=, *=, /=)\n";

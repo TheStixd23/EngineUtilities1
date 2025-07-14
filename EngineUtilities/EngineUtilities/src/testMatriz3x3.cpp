@@ -1,7 +1,25 @@
+/**
+ * @file testMatriz3x3.cpp
+ * @brief Prueba interactiva para la clase Matriz3x3 de EngineUtilities.
+ * @author Hannin Abarca
+ */
+
 #include <iostream>
 #include "../include/Matriz/Matriz3x3.h"
 using namespace std;
 
+/**
+ * @brief Ejecuta un menú interactivo para probar la clase Matriz3x3.
+ *
+ * Esta función permite al usuario:
+ * - Ingresar dos matrices 3x3 personalizadas.
+ * - Ver las matrices ingresadas.
+ * - Obtener las transpuestas.
+ * - Calcular determinantes e inversas.
+ * - Aplicar operaciones básicas: suma, resta, multiplicación, división y por escalar.
+ * - Generar matrices de escala y rotación.
+ * - Comparar matrices.
+ */
 void testMatriz3x3() {
     int option;
     double a00, a01, a02, a10, a11, a12, a20, a21, a22;
@@ -11,7 +29,7 @@ void testMatriz3x3() {
     EngineUtilities::Matriz3x3 m1, m2;
 
     do {
-        cout << "\n=== Menú - Prueba de Matriz3x3 ===\n";
+        cout << "\nMenu-Prueba de Matriz3x3\n";
         cout << "1. Ingresar matriz personalizada\n";
         cout << "2. Mostrar matrices actuales\n";
         cout << "3. Transpuesta\n";
