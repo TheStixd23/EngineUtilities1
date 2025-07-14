@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D9EEE92C-5BDA-43DD-AE76-D2C2EE4440B9}|EngineUtilities\\EngineUtilities.vcxproj|C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\include\\Vector\\CQuaternion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D9EEE92C-5BDA-43DD-AE76-D2C2EE4440B9}|EngineUtilities\\EngineUtilities.vcxproj|solutionrelative:EngineUtilities\\include\\Vector\\CQuaternion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D9EEE92C-5BDA-43DD-AE76-D2C2EE4440B9}|EngineUtilities\\EngineUtilities.vcxproj|C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\src\\testMatriz4x4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D9EEE92C-5BDA-43DD-AE76-D2C2EE4440B9}|EngineUtilities\\EngineUtilities.vcxproj|solutionrelative:EngineUtilities\\src\\testMatriz4x4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -55,10 +59,6 @@
       "RelativeMoniker": "D:0:0:{D9EEE92C-5BDA-43DD-AE76-D2C2EE4440B9}|EngineUtilities\\EngineUtilities.vcxproj|solutionrelative:EngineUtilities\\include\\Vector\\CVector3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9EEE92C-5BDA-43DD-AE76-D2C2EE4440B9}|EngineUtilities\\EngineUtilities.vcxproj|C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\include\\Vector\\CQuaternion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{D9EEE92C-5BDA-43DD-AE76-D2C2EE4440B9}|EngineUtilities\\EngineUtilities.vcxproj|solutionrelative:EngineUtilities\\include\\Vector\\CQuaternion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D9EEE92C-5BDA-43DD-AE76-D2C2EE4440B9}|EngineUtilities\\EngineUtilities.vcxproj|C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\include\\Vector\\CVector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{D9EEE92C-5BDA-43DD-AE76-D2C2EE4440B9}|EngineUtilities\\EngineUtilities.vcxproj|solutionrelative:EngineUtilities\\include\\Vector\\CVector2.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -78,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "testCVector4.cpp",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\src\\testCVector4.cpp",
               "RelativeDocumentMoniker": "EngineUtilities\\src\\testCVector4.cpp",
@@ -98,12 +98,11 @@
               "RelativeToolTip": "EngineUtilities\\src\\testCVector4.cpp",
               "ViewState": "AgIAABQAAAAAAAAAAAAmwB4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-13T23:10:07.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T23:10:07.466Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "testCVector3.cpp",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\src\\testCVector3.cpp",
               "RelativeDocumentMoniker": "EngineUtilities\\src\\testCVector3.cpp",
@@ -111,12 +110,11 @@
               "RelativeToolTip": "EngineUtilities\\src\\testCVector3.cpp",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAB4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-13T22:58:37.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T22:58:37.11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "testCVector2.cpp",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\src\\testCVector2.cpp",
               "RelativeDocumentMoniker": "EngineUtilities\\src\\testCVector2.cpp",
@@ -124,12 +122,11 @@
               "RelativeToolTip": "EngineUtilities\\src\\testCVector2.cpp",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAB4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-13T23:10:19.306Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T23:10:19.306Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "testCQuaternion.cpp",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\src\\testCQuaternion.cpp",
               "RelativeDocumentMoniker": "EngineUtilities\\src\\testCQuaternion.cpp",
@@ -137,12 +134,11 @@
               "RelativeToolTip": "EngineUtilities\\src\\testCQuaternion.cpp",
               "ViewState": "AgIAABgAAAAAAAAAAAAAAB8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-13T23:25:42.203Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T23:25:42.203Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\src\\Main.cpp",
               "RelativeDocumentMoniker": "EngineUtilities\\src\\Main.cpp",
@@ -150,12 +146,11 @@
               "RelativeToolTip": "EngineUtilities\\src\\Main.cpp",
               "ViewState": "AgIAADMAAAAAAAAAAAAAADoAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-13T23:07:13.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T23:07:13.196Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EngineMathTest.cpp",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\src\\EngineMathTest.cpp",
               "RelativeDocumentMoniker": "EngineUtilities\\src\\EngineMathTest.cpp",
@@ -163,12 +158,11 @@
               "RelativeToolTip": "EngineUtilities\\src\\EngineMathTest.cpp",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-13T22:46:54.785Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T22:46:54.785Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "testMatriz4x4.cpp",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\src\\testMatriz4x4.cpp",
               "RelativeDocumentMoniker": "EngineUtilities\\src\\testMatriz4x4.cpp",
@@ -181,7 +175,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "CQuaternion.h",
+              "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\include\\Vector\\CQuaternion.h",
+              "RelativeDocumentMoniker": "EngineUtilities\\include\\Vector\\CQuaternion.h",
+              "ToolTip": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\include\\Vector\\CQuaternion.h",
+              "RelativeToolTip": "EngineUtilities\\include\\Vector\\CQuaternion.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAO4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-07-13T22:44:04.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "testMatriz2x2.cpp",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\src\\testMatriz2x2.cpp",
               "RelativeDocumentMoniker": "EngineUtilities\\src\\testMatriz2x2.cpp",
@@ -189,12 +196,11 @@
               "RelativeToolTip": "EngineUtilities\\src\\testMatriz2x2.cpp",
               "ViewState": "AgIAABAAAAAAAAAAAAAmwBwAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-13T23:20:12.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T23:20:12.322Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "testMatriz3x3.cpp",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\src\\testMatriz3x3.cpp",
               "RelativeDocumentMoniker": "EngineUtilities\\src\\testMatriz3x3.cpp",
@@ -202,12 +208,11 @@
               "RelativeToolTip": "EngineUtilities\\src\\testMatriz3x3.cpp",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-13T23:22:19.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T23:22:19.183Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Matriz4x4.h",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\include\\Matriz\\Matriz4x4.h",
               "RelativeDocumentMoniker": "EngineUtilities\\include\\Matriz\\Matriz4x4.h",
@@ -215,12 +220,11 @@
               "RelativeToolTip": "EngineUtilities\\include\\Matriz\\Matriz4x4.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-13T22:33:39.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T22:33:39.707Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "EngineMath.h",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\include\\Utilities\\EngineMath.h",
               "RelativeDocumentMoniker": "EngineUtilities\\include\\Utilities\\EngineMath.h",
@@ -228,12 +232,11 @@
               "RelativeToolTip": "EngineUtilities\\include\\Utilities\\EngineMath.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAO8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-13T22:21:12.307Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T22:21:12.307Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "CVector4.h",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\include\\Vector\\CVector4.h",
               "RelativeDocumentMoniker": "EngineUtilities\\include\\Vector\\CVector4.h",
@@ -241,12 +244,11 @@
               "RelativeToolTip": "EngineUtilities\\include\\Vector\\CVector4.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-13T22:41:38.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T22:41:38.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "CVector3.h",
               "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\include\\Vector\\CVector3.h",
               "RelativeDocumentMoniker": "EngineUtilities\\include\\Vector\\CVector3.h",
@@ -254,21 +256,7 @@
               "RelativeToolTip": "EngineUtilities\\include\\Vector\\CVector3.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-13T22:39:56.474Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CQuaternion.h",
-              "DocumentMoniker": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\include\\Vector\\CQuaternion.h",
-              "RelativeDocumentMoniker": "EngineUtilities\\include\\Vector\\CQuaternion.h",
-              "ToolTip": "C:\\Users\\hanni\\OneDrive\\Documents\\GitHub\\EngineUtilities\\EngineUtilities\\EngineUtilities\\include\\Vector\\CQuaternion.h",
-              "RelativeToolTip": "EngineUtilities\\include\\Vector\\CQuaternion.h",
-              "ViewState": "AgIAANYAAAAAAAAAAAAmwO4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-13T22:44:04.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T22:39:56.474Z"
             },
             {
               "$type": "Document",
@@ -280,8 +268,7 @@
               "RelativeToolTip": "EngineUtilities\\include\\Vector\\CVector2.h",
               "ViewState": "AgIAAMUAAAAAAAAAAAAmwN0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-13T22:31:31.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T22:31:31.496Z"
             },
             {
               "$type": "Document",
@@ -293,8 +280,7 @@
               "RelativeToolTip": "EngineUtilities\\include\\Matriz\\Matriz3x3.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-13T22:20:14.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T22:20:14.989Z"
             },
             {
               "$type": "Document",
@@ -306,8 +292,7 @@
               "RelativeToolTip": "EngineUtilities\\include\\Matriz\\Matriz2x2.h",
               "ViewState": "AgIAAJAAAAAAAAAAAAAmwKgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-13T22:17:39.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T22:17:39.427Z"
             }
           ]
         }
