@@ -1,0 +1,12 @@
+﻿  EngineMathTest.cpp
+C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\EngineUtilities\src\EngineMathTest.cpp(146,21): warning C4566: character represented by universal-character-name '\u2248' cannot be represented in the current code page (1252)
+  Main.cpp
+  testCVector2.cpp
+  testCVector3.cpp
+  testCVector4.cpp
+  testMatriz2x2.cpp
+  testMatriz3x3.cpp
+  testMatriz4x4.cpp
+  testCQuaternion.cpp
+  Generating Code...
+  EngineUtilities.vcxproj -> C:\Users\hanni\OneDrive\Documents\GitHub\EngineUtilities\EngineUtilities\x64\Debug\EngineUtilities.exe
